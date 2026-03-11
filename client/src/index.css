@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..144,400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-medium-green: #1a8917;
+  --color-medium-black: #292929;
+  --color-primary-50: #f7f9f9;
+
+  --font-inter: "Inter", sans-serif;
+  --font-source-serif: "Source Serif 4", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 transition-colors duration-500 font-inter antialiased;
+  }
+
+  body.dark {
+    @apply bg-slate-950 text-slate-50;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-source-serif font-black tracking-tight;
+  }
+
+  /* Optimized for reading */
+  .reading-content {
+    @apply font-source-serif text-xl leading-[1.8] text-slate-800 dark:text-slate-200 tracking-[0.01em];
+  }
+
+  /* Prose Enhancements */
+  .prose {
+    --tw-prose-body: theme('colors.slate.700');
+    --tw-prose-headings: theme('colors.slate.900');
+    --tw-prose-links: theme('colors.medium-green');
+    --tw-prose-bold: theme('colors.slate.900');
+    --tw-prose-quotes: theme('colors.slate.900');
+    --tw-prose-counters: theme('colors.slate.500');
+    --tw-prose-bullets: theme('colors.slate.300');
+    --tw-prose-hr: theme('colors.slate.100');
+    --tw-prose-quote-borders: theme('colors.medium-green');
+    --tw-prose-captions: theme('colors.slate.500');
+    --tw-prose-code: theme('colors.slate.900');
+    --tw-prose-pre-code: theme('colors.slate.200');
+    --tw-prose-pre-bg: theme('colors.slate.900');
+    --tw-prose-th-borders: theme('colors.slate.200');
+    --tw-prose-td-borders: theme('colors.slate.100');
+  }
+
+  .dark .prose {
+    --tw-prose-body: theme('colors.slate.300');
+    --tw-prose-headings: theme('colors.white');
+    --tw-prose-links: theme('colors.medium-green');
+    --tw-prose-bold: theme('colors.white');
+    --tw-prose-quotes: theme('colors.slate.100');
+    --tw-prose-counters: theme('colors.slate.400');
+    --tw-prose-bullets: theme('colors.slate.600');
+    --tw-prose-hr: theme('colors.slate.800');
+    --tw-prose-quote-borders: theme('colors.medium-green');
+    --tw-prose-captions: theme('colors.slate.400');
+    --tw-prose-code: theme('colors.white');
+    --tw-prose-pre-code: theme('colors.slate.300');
+    --tw-prose-pre-bg: rgb(15 23 42);
+    --tw-prose-th-borders: theme('colors.slate.700');
+    --tw-prose-td-borders: theme('colors.slate.800');
+  }
+}
+
+.glass {
+  @apply bg-white/90 backdrop-blur-2xl border border-slate-100 dark:bg-slate-900/90 dark:border-slate-800/50;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
