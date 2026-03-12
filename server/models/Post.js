@@ -22,7 +22,7 @@ const postSchema = new mongoose.Schema({
     category: {
         type: String,
         required: [true, 'Please add a category'],
-        enum: ['Technology', 'Lifestyle', 'Health', 'Business', 'Education', 'Other']
+        enum: ['Technology', 'Science', 'Blog', 'Lifestyle', 'Health', 'Business', 'Education', 'Writing', 'Design', 'Future', 'Politics', 'Art', 'Self Improved', 'Other']
     },
     tags: [String],
     likes: [{

@@ -42,63 +42,75 @@ const Home = () => {
     }, [activeCategory]);
 
     return (
-        <div className="flex flex-col min-h-screen bg-white dark:bg-slate-950 transition-colors duration-500">
+        <div className="flex flex-col min-h-screen bg-transparent transition-colors duration-500">
             {/* High-Impact Hero Section */}
-            <section className="relative overflow-hidden bg-white dark:bg-slate-950 py-24 md:py-32 px-6 border-b border-slate-100 dark:border-slate-900">
-                <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:20px_20px] opacity-30"></div>
+            <section className="relative overflow-hidden py-24 md:py-32 px-6">
+                {/* Ambient glowing orb behind text */}
+                <motion.div 
+                    animate={{ 
+                        scale: [1, 1.2, 1],
+                        opacity: [0.3, 0.5, 0.3],
+                    }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-medium-green/20 dark:bg-medium-green/10 rounded-full blur-[120px] pointer-events-none"
+                />
                 <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-16">
                     <div className="flex-1 space-y-10">
                         <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-medium-green/10 text-medium-green text-[10px] font-black uppercase tracking-widest"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 text-medium-green text-[10px] font-black uppercase tracking-widest shadow-sm"
                         >
                             <TrendingUp size={12} /> The New Way to Read & Write
                         </motion.div>
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.1, ease: [0.2, 0.8, 0.2, 1] }}
                             className="text-7xl md:text-9xl font-black font-source-serif leading-[0.9] tracking-tight text-slate-900 dark:text-white"
                         >
                             Human <br />
-                            <span className="italic font-normal serif text-medium-green">stories</span> & <br />
+                            <span className="italic font-normal serif text-transparent bg-clip-text bg-gradient-to-r from-medium-green to-rose-400">stories</span> & <br />
                             ideas.
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 max-w-xl leading-relaxed font-inter font-medium"
+                            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                            className="text-xl md:text-2xl text-slate-700 dark:text-slate-300 max-w-xl leading-relaxed font-inter font-medium"
                         >
                             Join a world-class community of writers, thinkers, and storytellers. Explore the depth of human experience through words.
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
+                            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                             className="flex items-center gap-6"
                         >
-                            <Link to="/posts" className="px-10 py-4 bg-medium-black text-white dark:bg-white dark:text-medium-black rounded-full text-lg font-black hover:bg-black transition-all shadow-2xl active:scale-95 inline-block">
+                            <Link to="/posts" className="px-10 py-4 bg-slate-900 text-white dark:bg-white dark:text-slate-900 rounded-full text-lg font-black hover:scale-105 hover:shadow-xl hover:shadow-medium-green/20 transition-all active:scale-95 inline-block">
                                 Start Reading
                             </Link>
-                            <Link to="/posts" className="text-sm font-black uppercase tracking-widest border-b-2 border-black dark:border-white pb-1 hover:opacity-70 transition-opacity">
+                            <Link to="/posts" className="group text-sm font-black uppercase tracking-widest flex items-center gap-2 hover:text-medium-green transition-colors text-slate-900 dark:text-white relative">
                                 Explore Stories
+                                <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-slate-900 dark:bg-white group-hover:bg-medium-green group-hover:w-full transition-all duration-300"></span>
                             </Link>
                         </motion.div>
                     </div>
                     <div className="hidden lg:block flex-1 relative">
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                            initial={{ opacity: 0, y: 30, rotateX: 10 }}
+                            animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                            transition={{ duration: 1.2, delay: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
                             className="relative"
+                            style={{ perspective: 1000 }}
                         >
-                            <div className="absolute -inset-10 bg-medium-green/5 blur-[100px] rounded-full animate-pulse"></div>
-                            <div className="p-4 bg-white dark:bg-slate-900 rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-slate-800 transform rotate-3 hover:rotate-0 transition-transform duration-700">
+                            <div className="absolute -inset-10 bg-gradient-to-tr from-medium-green/20 to-rose-400/20 blur-[80px] rounded-[4rem] animate-pulse"></div>
+                            <div className="p-3 bg-white/40 dark:bg-slate-900/40 backdrop-blur-xl rounded-[2.5rem] shadow-2xl border border-white/50 dark:border-slate-700/50 transform hover:-translate-y-4 hover:shadow-medium-green/20 transition-all duration-700 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1457369804593-5423136ebf7b?q=80&w=2070&auto=format&fit=crop"
                                     alt="Creative writing"
-                                    className="w-full h-[550px] object-cover rounded-[2rem] saturate-[0.8] contrast-[1.1]"
+                                    className="w-full h-[550px] object-cover rounded-[2rem] saturate-[0.8] contrast-[1.1] transition-transform duration-700 hover:scale-105"
                                 />
                             </div>
                         </motion.div>
@@ -107,7 +119,7 @@ const Home = () => {
             </section>
 
             {/* Trending Section with Numeric Markers */}
-            <div className="bg-white dark:bg-slate-950 pt-20 pb-16 border-b border-slate-50 dark:border-slate-900">
+            <div className="bg-white/60 dark:bg-slate-950/60 backdrop-blur-lg pt-20 pb-16 border-y border-white/50 dark:border-slate-800/50">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex items-center gap-3 mb-12">
                         <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-800">

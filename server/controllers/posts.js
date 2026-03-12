@@ -116,7 +116,7 @@ exports.createPost = asyncHandler(async (req, res, next) => {
         return next(new ErrorResponse('Content must be at least 10 characters', 400));
     }
 
-    const validCategories = ['Technology', 'Lifestyle', 'Health', 'Business', 'Education', 'Other'];
+    const validCategories = ['Technology', 'Science', 'Blog', 'Lifestyle', 'Health', 'Business', 'Education', 'Writing', 'Design', 'Future', 'Politics', 'Art', 'Self Improved', 'Other'];
     if (category && !validCategories.includes(category)) {
         return next(new ErrorResponse(`Category must be one of: ${validCategories.join(', ')}`, 400));
     }

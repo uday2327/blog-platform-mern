@@ -128,9 +128,19 @@ const EditPost = () => {
                                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                                 >
                                     <option>Technology</option>
+                                    <option>Science</option>
+                                    <option>Blog</option>
                                     <option>Lifestyle</option>
                                     <option>Health</option>
                                     <option>Business</option>
+                                    <option>Education</option>
+                                    <option>Writing</option>
+                                    <option>Design</option>
+                                    <option>Future</option>
+                                    <option>Politics</option>
+                                    <option>Art</option>
+                                    <option>Self Improved</option>
+                                    <option>Other</option>
                                 </select>
                                 <input
                                     type="text"
