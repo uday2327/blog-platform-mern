@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="space-y-4 text-center md:text-left">
                     <Link to="/" className="text-2xl font-bold font-serif">
-                        BlogApp
+                        BlushInk
                     </Link>
                     <p className="text-xs text-slate-500 max-w-xs">
                         Where good ideas find you. Share your thoughts with the world.
@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <span className="text-xs text-slate-400">© 2026 BlogApp Inc.</span>
+                    <span className="text-xs text-slate-400">© 2026 BlushInk Inc.</span>
                 </div>
             </div>
         </footer>

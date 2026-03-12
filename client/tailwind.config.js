@@ -13,7 +13,7 @@ export default {
             },
             colors: {
                 primary: {
-                    50: '#f8fafc',
+                    50: '#fff7fb',
                     100: '#f1f5f9',
                     200: '#e2e8f0',
                     300: '#cbd5e1',
@@ -25,8 +25,8 @@ export default {
                     900: '#0f172a',
                 },
                 medium: {
-                    green: '#1a8917',
-                    black: '#242424',
+                    green: '#ff3b8d',
+                    black: '#121212',
                     gray: '#757575',
                 }
             },

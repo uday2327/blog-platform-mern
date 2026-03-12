@@ -124,7 +124,7 @@ const Profile = () => {
                                 <div className="text-center py-24 bg-slate-50 dark:bg-slate-900/40 rounded-[3rem] border-2 border-dashed border-slate-100 dark:border-slate-800">
                                     <FileText size={48} className="mx-auto text-slate-200 mb-6" />
                                     <h3 className="text-2xl font-black font-source-serif mb-3">No stories yet.</h3>
-                                    <p className="text-slate-400 mb-8 max-w-xs mx-auto font-medium">You haven't published any stories on BlogApp yet. Share your first experience.</p>
+                                    <p className="text-slate-400 mb-8 max-w-xs mx-auto font-medium">You haven't published any stories on BlushInk yet. Share your first experience.</p>
                                     <Link to="/create" className="px-10 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-black text-[11px] uppercase tracking-widest shadow-2xl active:scale-95 transition-all">
                                         Write your first story
                                     </Link>

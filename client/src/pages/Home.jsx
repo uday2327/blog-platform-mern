@@ -113,7 +113,7 @@ const Home = () => {
                         <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-800">
                             <TrendingUp size={16} className="text-slate-900 dark:text-white" />
                         </div>
-                        <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Trending on BlogApp</h2>
+                        <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Trending on BlushInk</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-16">

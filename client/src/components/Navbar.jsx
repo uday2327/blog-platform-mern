@@ -39,8 +39,8 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <div className="flex items-center gap-12">
                     <Link to="/" className="text-3xl font-black font-source-serif tracking-tighter text-slate-900 dark:text-white flex items-center gap-2">
-                        <span className="w-8 h-8 bg-medium-green rounded-lg flex items-center justify-center text-white text-sm transform -rotate-6 group-hover:rotate-0 transition-transform">B</span>
-                        BlogApp
+                        <span className="w-8 h-8 bg-medium-green rounded-lg flex items-center justify-center text-white text-[11px] transform -rotate-6 group-hover:rotate-0 transition-transform tracking-tight">BI</span>
+                        BlushInk
                     </Link>
                     <div className="hidden lg:flex items-center gap-8">
                         <Link
@@ -50,7 +50,7 @@ const Navbar = () => {
                             Explore
                         </Link>
                         <Link
-                            to="/posts"
+                            to="/membership"
                             className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all"
                         >
                             Membership

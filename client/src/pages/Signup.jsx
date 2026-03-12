@@ -56,7 +56,7 @@ const Signup = () => {
                 className="w-full max-w-lg bg-white dark:bg-slate-900 shadow-2xl border border-slate-100 dark:border-slate-800 rounded-[2.5rem] p-10 md:p-14 space-y-10"
             >
                 <div className="text-center space-y-4">
-                    <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight">Join BlogApp.</h1>
+                    <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight">Join BlushInk.</h1>
                     <p className="text-slate-500 font-medium tracking-wide">Create an account to start writing and reading.</p>
                 </div>
 

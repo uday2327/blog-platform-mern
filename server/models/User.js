@@ -26,6 +26,10 @@ const userSchema = new mongoose.Schema({
         enum: ['user', 'author', 'admin'],
         default: 'user'
     },
+    isPremium: {
+        type: Boolean,
+        default: false
+    },
     profileImage: {
         type: String,
         default: 'no-photo.jpg'

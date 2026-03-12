@@ -17,6 +17,7 @@ const CreatePost = lazy(() => import('./pages/CreatePost'));
 const EditPost = lazy(() => import('./pages/EditPost'));
 const PostDetail = lazy(() => import('./pages/PostDetail'));
 const BlogList = lazy(() => import('./pages/BlogList'));
+const Membership = lazy(() => import('./pages/Membership'));
 
 // Global suspense loader
 const PageLoader = () => (
@@ -39,6 +40,7 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/posts" element={<BlogList />} />
                   <Route path="/archive" element={<BlogList />} />
+                  <Route path="/membership" element={<Membership />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<Signup />} />
 

@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+const baseURL =
+    import.meta.env.VITE_API_URL ||
+    (import.meta.env.DEV ? 'http://localhost:5000/api' : 'https://blog-platform-mern-p4bj.onrender.com/api');
+
 const API = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL,
 });
 
 // Add a request interceptor to include the auth token
@@ -64,5 +68,6 @@ export const getUsers = () => API.get('/users');
 export const toggleFollow = (userId) => API.post(`/users/${userId}/follow`);
 export const toggleBookmark = (postId) => API.post(`/users/bookmarks/${postId}`);
 export const toggleLike = (postId) => API.post(`/posts/${postId}/like`);
+export const activateMembership = () => API.post('/users/membership');
 
 export default API;
